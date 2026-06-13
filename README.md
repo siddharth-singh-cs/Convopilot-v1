@@ -82,9 +82,7 @@ http://localhost:5000
 
 Add screenshots here later:
 
-- Dashboard
-- Message History
-- WhatsApp Automation in Action
+![ConvoPilot Dashboard](screenshots/dashboard.png)
 
 ---
 
