@@ -1,0 +1,183 @@
+/* Custom AI SaaS Visual Identity tokens based directly on design requirements */
+:root {
+    --bg-deep-navy: #0B1020;
+    --text-white: #E8EAF0;
+    --text-muted-gray: #7B8599;
+    
+    /* Brand Color Schema */
+    --emerald: #00D084;
+    --cyan: #00C2FF;
+    --violet: #6C63FF;
+    
+    /* Glassmorphism Structural Modifiers */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-input-bg: rgba(11, 16, 32, 0.6);
+}
+
+/* Document Setup Rules */
+body {
+    background-color: var(--bg-deep-navy);
+    color: var(--text-white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Utility Layout Modifiers */
+.tracking-tight { letter-spacing: -0.03em; }
+.tracking-wider { letter-spacing: 0.15em; }
+.fs-7 { font-size: 0.8rem; }
+.text-muted-gray { color: var(--text-muted-gray); }
+.text-emerald { color: var(--emerald); }
+.text-cyan { color: var(--cyan); }
+.text-violet { color: var(--violet); }
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--emerald), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --------------------------------------------------------
+   EXACT INTERPRETATION LAYERING OF UPLOADED BRAND LOGO MARK
+-------------------------------------------------------- */
+.logo-wrapper {
+    width: 38px;
+    height: 38px;
+}
+
+.logo-bubble {
+    width: 30px;
+    height: 30px;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--bg-deep-navy), var(--bg-deep-navy)) padding-box,
+                linear-gradient(135deg, var(--emerald), var(--cyan)) border-box;
+    border-radius: 50% 50% 50% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+}
+
+.logo-eyes {
+    width: 14px;
+    height: 8px;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    position: relative;
+}
+
+.logo-eyes::before, .logo-eyes::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: var(--emerald);
+    border-radius: 50%;
+    top: 1px;
+    box-shadow: 0 0 4px var(--emerald);
+}
+.logo-eyes::before { left: 2px; }
+.logo-eyes::after { right: 2px; }
+
+.logo-badge-plane {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    width: 14px;
+    height: 14px;
+    background: var(--violet);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7px;
+    color: white;
+}
+
+.logo-badge-clock {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    background: #050810;
+    border: 1px solid var(--cyan);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7px;
+    color: var(--cyan);
+}
+
+/* Dynamic Slogan Layout Configuration Elements */
+.brand-slogan {
+    font-size: 0.75rem;
+    color: var(--text-muted-gray);
+}
+.dot-green { color: var(--emerald); font-weight: bold; }
+.dot-blue { color: var(--cyan); font-weight: bold; }
+.dot-purple { color: var(--violet); font-weight: bold; }
+
+/* Glassmorphism Structural Definitions */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Card Transitions & Hover Enhancements */
+.stat-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    border: 1px solid var(--glass-border);
+}
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+.card-sent:hover { border-color: rgba(0, 208, 132, 0.4); }
+.card-pending:hover { border-color: rgba(0, 194, 255, 0.4); }
+.card-failed:hover { border-color: rgba(108, 99, 255, 0.4); }
+
+.icon-shape {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-emerald-opaque { background-color: rgba(0, 208, 132, 0.1); }
+.bg-cyan-opaque { background-color: rgba(0, 194, 255, 0.1); }
+.bg-violet-opaque { background-color: rgba(108, 99, 255, 0.1); }
+
+/* Ambient Dynamic Glow FX Underlays */
+.glow-effect {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.15;
+    bottom: -30px;
+    right: -30px;
+    pointer-events: none;
+}
+.gradient-emerald { background: var(--emerald); }
+.gradient-cyan { background: var(--cyan); }
+.gradient-violet { background: var(--violet); }
+
+/* Navigation Item Element Layout configurations */
+.nav-link {
+    color: var(--text-muted-gray);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
